@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTableView: UITableViewCell {
+class NewTableView: UITableViewCell {
     
     static let identifier = "NewTableViewCell"
 

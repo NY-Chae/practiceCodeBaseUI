@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     let nameLabel = UILabel()
     let addButton = UIButton()
     let myTableView = UITableView()
@@ -21,31 +21,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        view.addSubview(nameLabel)
-//        view.addSubview(addButton)
-//        view.addSubview(myTableView)
-//        
+        //        view.addSubview(nameLabel)
+        //        view.addSubview(addButton)
+        //        view.addSubview(myTableView)
+        //
         // forEach를 사용하여 코드를 간결하게!
         [nameLabel, addButton, myTableView].forEach {
             view.addSubview($0)
         }
         
         // 1 3 2 (순서대로)
-//        [button1, button3, button2].forEach {
-//            stackView.addArrangedSubview($0)
-//        }
-        
+        //        [button1, button3, button2].forEach {
+        //            stackView.addArrangedSubview($0)
+        //        }
+
         view.addSubview(stackView)
         stackView.addArrangedSubview(button1)
         [button2, button3].forEach {
             stackView.addArrangedSubview($0)
         }
-      
         
-        // 여기는 내일 질문! 
-//        myTableView.register(NewTableViewCell.self, forCellReuseIdentifier: NewTableViewCell.identifier
-    
-    
-    
+        myTableView.register(NewTableView.self, forCellReuseIdentifier:NewTableView.identifier)
+    }
 }
-
